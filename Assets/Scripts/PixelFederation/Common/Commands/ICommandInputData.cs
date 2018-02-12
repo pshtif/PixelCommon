@@ -1,6 +1,6 @@
 ﻿namespace PixelFederation.Common
 {
-    public interface IProvidedApplicationContext
+    public interface ICommandInputData
     {
         
     }

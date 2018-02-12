@@ -1,9 +1,9 @@
 ﻿using Application.Networking;
 using PixelFederation.Libraries.Networking;
 
-namespace PixelFederation.Common.Processors
+namespace PixelFederation.Common
 {
-    public class NetworkProcessor : IProcessor
+    public class NetworkProcessor : ICommandProcessor
     {
         private INetworking _networking;
 
@@ -12,7 +12,7 @@ namespace PixelFederation.Common.Processors
             _networking = networking;
         }
 
-        public void Process(IActionData actionData)
+        public void Process(ICommandInputData p_inputData, ICommandOutputData p_outputData)
         {
             ICommandData data = actionData as ICommandData;
             if (data != null) 

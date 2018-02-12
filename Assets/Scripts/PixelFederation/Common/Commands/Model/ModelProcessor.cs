@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Pixel.Common.Processors
+namespace PixelFederation.Common
 {
-    public class ModelProcessor : IProcessor
+    public class ModelProcessor : ICommandProcessor
     {
         private ModelManager _model;
         private Dictionary<Type, IModelCommand> _mapping;
@@ -16,7 +16,7 @@ namespace Pixel.Common.Processors
             _mapping.Add(typeof(SendTrainActionData), new SendTrainActionModelCommand());
         }
         
-        public void Process(IActionData actionData)
+        public ICommandOutputData Process(IActionData actionData)
         {
             Type type = actionData.GetType();
             if (_mapping.ContainsKey(type))

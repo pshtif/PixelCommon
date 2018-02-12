@@ -1,4 +1,4 @@
-﻿namespace Pixel.Common.Processors
+﻿namespace PixelFederation.Common
 {
     public interface IModelCommand
     {
