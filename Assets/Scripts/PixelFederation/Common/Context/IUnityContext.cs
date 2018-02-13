@@ -1,6 +1,6 @@
-﻿namespace Pixel
+﻿namespace PixelFederation.Common
 {
-    public interface IUnityApplicationContext
+    public interface IUnityContext
     {
         void Start();
 

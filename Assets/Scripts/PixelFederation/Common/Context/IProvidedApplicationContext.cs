@@ -1,4 +1,4 @@
-﻿namespace Pixel
+﻿namespace PixelFederation.Common
 {
     public interface IProvidedApplicationContext
     {

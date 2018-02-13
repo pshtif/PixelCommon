@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Pixel
+namespace PixelFederation.Common
 {
     public static class ApplicationContextProvider
     {

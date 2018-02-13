@@ -1,12 +1,37 @@
-﻿namespace Pixel
+﻿namespace PixelFederation.Common
 {
     public class ModuleContext
     {
         private IProvidedApplicationContext _applicationContext;
         
-        public ModuleContext(IProvidedApplicationContext p_applicationContext)
+        public ModuleContext()
         {
-            _applicationContext = p_applicationContext;
+        }
+
+        public virtual void Inject(IProvidedApplicationContext applicationContext)
+        {
+            IProvidedApplicationContext p_applicationContext;
+        }
+
+        public void Dispose()
+        {
+            
+        }
+        
+        public void Start()
+        {
+        }
+        
+        public void Update()
+        {
+        }
+        
+        public void LateUpdate()
+        {
+        }
+        
+        public void FixedUpdate()
+        {
         }
     }
 }

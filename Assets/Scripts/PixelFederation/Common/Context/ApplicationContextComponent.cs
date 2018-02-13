@@ -1,35 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Pixel;
 using UnityEngine;
 
-public class ApplicationContextComponent : MonoBehaviour
+namespace PixelFederation.Common
 {
 
-	private IUnityApplicationContext _applicationContext;
+	public class ApplicationContextComponent : MonoBehaviour
+	{
 
-	void Awake()
-	{
-		_applicationContext = new ApplicationContext();
-	}
-	
-	void Start()
-	{
-		_applicationContext.Start();
-	}
-	
-	void Update()
-	{
-		_applicationContext.Update();
-	}
+		private IUnityContext _applicationContext;
 
-	void LateUpdate()
-	{
-		_applicationContext.LateUpdate();
-	}
-	
-	void FixedUpdate()
-	{
-		_applicationContext.FixedUpdate();
+		void Awake()
+		{
+			// Create application context with initializer 
+		}
+
+		void Start()
+		{
+			_applicationContext.Start();
+		}
+
+		void Update()
+		{
+			_applicationContext.Update();
+		}
+
+		void LateUpdate()
+		{
+			_applicationContext.LateUpdate();
+		}
+
+		void FixedUpdate()
+		{
+			_applicationContext.FixedUpdate();
+		}
 	}
 }

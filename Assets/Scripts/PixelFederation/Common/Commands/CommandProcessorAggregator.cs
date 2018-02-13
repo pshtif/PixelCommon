@@ -17,12 +17,12 @@ namespace PixelFederation.Common
             _commandProcessors.Add(p_commandProcessor);
         }
 
-        public void Process(ICommandInputData p_inputData)
+        public void Process(ICommandInputData inputData)
         {
             ICommandOutputData outputData;
             foreach (ICommandProcessor processor in _commandProcessors)
             {
-                processor.Process(p_inputData, out outputData);
+                processor.Process(inputData, out outputData);
             }
         }
     }
